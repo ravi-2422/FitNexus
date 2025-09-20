@@ -1,15 +1,14 @@
+server:
+  port: 8083
+
 spring:
   application:
-    name: activity-service
-
-  cloud:
-    config:
-      enabled: false
+    name: ai-service
 
   data:
     mongodb:
-      uri: mongodb+srv://ravirkumar2422:lba8qWzdGWadOrU2@cluster0.pdnfl7u.mongodb.net/fitnessactivity
-      database: fitnessactivity
+      uri: mongodb+srv://ravirkumar2422:lba8qWzdGWadOrU2@cluster0.pdnfl7u.mongodb.net/fintnessrecommendation
+      database: fintnessrecommendation
 
   rabbitmq:
     host: localhost
@@ -17,12 +16,9 @@ spring:
     username: guest
     password: guest
 
-server:
-  port: 8082
-
 eureka:
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
 rabbitmq:

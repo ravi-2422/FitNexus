@@ -4,6 +4,7 @@ import com.fitness.activityservice.dto.ActivityRequest;
 import com.fitness.activityservice.dto.ActivityResponse;
 import com.fitness.activityservice.service.ActivityService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/activities")
 @AllArgsConstructor
+@Slf4j
 public class ActivityController {
 
     private ActivityService activityService;
 
     @PostMapping
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request, @RequestHeader("X-User-ID") String userId){
+        System.out.println("Calling the api");
+        log.info("Calling the api for register activity:", userId);
         if (userId != null) {
             request.setUserId(userId);
         }

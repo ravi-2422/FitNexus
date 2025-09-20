@@ -8,7 +8,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://ravirkumar2422:lba8qWzdGWadOrU2@cluster0.pdnfl7u.mongodb.net/fitnessactivity
+      uri: 
       database: fitnessactivity
 
   rabbitmq:

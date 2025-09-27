@@ -8,8 +8,8 @@ spring:
 
   data:
     mongodb:
-      uri: 
-      database: fitnessactivity
+      uri:
+      database: 
 
   rabbitmq:
     host: localhost
